@@ -1,6 +1,3 @@
-//Ad-Soyad: RUSLAN ZHUMAYEV
-//Öðr. No: 5230505113
-
 #include <stdio.h> 
 #include <stdlib.h>
 #include <math.h>
@@ -43,7 +40,7 @@ int main() {
         {"Pinar", {0}}
     };
 
-  // Rastgele veri oluþturma
+  // Rastgele veri oluÃ¾turma
     srand(0);
     for (int i = 0; i < MAHALLE_SAYISI; i++) {
         for (int j = 0; j < KRITER_SAYISI; j++) {
@@ -51,10 +48,10 @@ int main() {
         }
     }
 
-  // Aðýrlýklar
+  // AÃ°Ã½rlÃ½klar
     double agirliklar[KRITER_SAYISI] = {0.3, 0.25, 0.2, 0.15, 0.1};
   
-  // Aðýrlýklý skor hesaplama
+  // AÃ°Ã½rlÃ½klÃ½ skor hesaplama
     for (int i = 0; i < MAHALLE_SAYISI; i++) {
         mahalleler[i].agirlikli_skor = 0;
         for (int j = 0; j < KRITER_SAYISI; j++) {
@@ -70,7 +67,7 @@ int main() {
         printf("%s: %.2f\n", mahalleler[i].isim, mahalleler[i].softmax_skor);
     }
 
-  // En uygun güzergahý belirleme
+  // En uygun gÃ¼zergahÃ½ belirleme
     int en_uygun_index = 0;
     for (int i = 1; i < MAHALLE_SAYISI; i++) {
         if (mahalleler[i].softmax_skor > mahalleler[en_uygun_index].softmax_skor) {
